@@ -1,28 +1,30 @@
-/* 主背景 */
+/* 全頁背景圖片與字體設定 */
 body {
   margin: 0;
   font-family: 'Baloo 2', cursive;
-  background-color: white;
-}
-
-/* 封面區塊 */
-.cover-container {
-  position: relative;
-  min-height: 100vh;
-  background-image: url("assets/images/cover.jpg");
+  background-image: url('assets/images/cover.jpg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+/* 封面區塊：包含主標題與倒數字 */
+.cover-container {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
-  text-shadow: 1px 1px 5px black;
   padding: 40px 20px;
+  text-align: center;
+  text-shadow: 1px 1px 5px black;
 }
 
 .main-title {
   font-size: 3rem;
+  margin-bottom: 20px;
 }
 
 .subtitle {
@@ -30,14 +32,15 @@ body {
   margin-top: 10px;
 }
 
-/* 三個按鈕區域 */
+/* 三個按鈕的包裹區塊 */
 .nav-section {
-  background: white;
+  background-color: transparent; /* 透明背景讓背景圖透出 */
   padding: 60px 0;
   display: flex;
   justify-content: center;
 }
 
+/* 按鈕容器：排成一排或多行 */
 .nav-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -46,6 +49,7 @@ body {
   max-width: 1000px;
 }
 
+/* 單個按鈕樣式 */
 .nav-button {
   background: #ffe6f0;
   color: #d63384;
