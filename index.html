@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mona & Bingchen's Server</title>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
   <style>
     body {
       margin: 0;
       font-family: 'Baloo 2', cursive;
+      background-color: white;
     }
     .cover-container {
       position: relative;
-      height: 100vh;
+      min-height: 100vh;
       background-image: url("assets/images/cover.jpg");
       background-size: cover;
       background-position: center;
@@ -23,6 +23,7 @@
       flex-direction: column;
       color: white;
       text-shadow: 1px 1px 5px black;
+      padding: 40px 20px;
     }
     .main-title {
       font-size: 3rem;
@@ -31,10 +32,9 @@
       font-size: 1.2rem;
       margin-top: 10px;
     }
-    /* 暫時移除波浪動畫 */
-    .nav-buttons {
-      background: white;
-      padding: 40px 20px;
+    .section-buttons {
+      background-color: white;
+      padding: 50px 20px;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -68,14 +68,11 @@
     <p class="subtitle">🌸 距離年底還有：</p>
   </div>
 
-  <!-- 暫不加入波浪動畫 -->
-  <!-- <div class="wave"></div> -->
-
-  <div class="nav-buttons">
-    <a href="letters.html" class="nav-button">📄 Mona's Letters</a>
+  <div class="section-buttons">
+    <a href="message.html" class="nav-button">💬 Message Board</a>
     <a href="photos.html" class="nav-button">📸 Photo Gallery</a>
     <a href="trips.html" class="nav-button">📰 Love News</a>
-    <a href="message.html" class="nav-button">💬 Message Board</a>
+    <a href="letters.html" class="nav-button">📄 Mona's Letters</a>
   </div>
 </body>
 </html>
