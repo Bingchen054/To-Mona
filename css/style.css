@@ -129,3 +129,25 @@ p {
   background-color: #ffccd9;
   transform: scale(1.05);
 }
+
+.big-title {
+  font-size: 4rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.big-title {
+  font-size: 4rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.countdown-text {
+  font-size: 1.5rem;
+}
+
+.large-button {
+  font-size: 1.3rem;
+  padding: 20px 35px;
+  font-weight: bold;
+}
