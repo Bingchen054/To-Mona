@@ -1,39 +1,47 @@
-function updateTimer(id, from, to) {
-  const now = new Date();
-  const diff = to - from;
-
-  if (diff < 0) {
-    document.getElementById(id).textContent = "已經過去了 ❤️";
+function updateTimer(elementId, targetDate, now) {
+  const diff = targetDate - now;
+  if (diff <= 0) {
+    document.getElementById(elementId).innerText = "倒數已結束";
     return;
   }
 
+  const seconds = Math.floor(diff / 1000) % 60;
+  const minutes = Math.floor(diff / (1000 * 60)) % 60;
+  const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((diff / (1000 * 60)) % 60);
-  const seconds = Math.floor((diff / 1000) % 60);
 
-  document.getElementById(id).textContent =
-    `${days}天 ${hours}小時 ${minutes}分 ${seconds}秒`;
-}
-
-function getNextBirthday(month, day) {
-  const now = new Date();
-  let year = now.getFullYear();
-  let birthday = new Date(`${year}-${month}-${day}T00:00:00`);
-
-  if (birthday < now) {
-    birthday = new Date(`${year + 1}-${month}-${day}T00:00:00`);
+  let label = "";
+  switch (elementId) {
+    case "meetTimer":
+      label = "💖 我們認識至今：";
+      break;
+    case "confessTimer":
+      label = "💘 我們表白至今：";
+      break;
+    case "monaBirthdayTimer":
+      label = "🎂 Mona 下一次生日倒數：";
+      break;
+    case "bingchenBirthdayTimer":
+      label = "🎂 Bingchen 下一次生日倒數：";
+      break;
+    case "newYearTimer":
+      label = "🌸 距離年底還有：";
+      break;
   }
 
-  return birthday;
+  if (elementId.includes("Birthday") || elementId === "newYearTimer") {
+    document.getElementById(elementId).innerText = `${label}${days}天 ${hours}小時 ${minutes}分 ${seconds}秒`;
+  } else {
+    document.getElementById(elementId).innerText = `${label}${days}天 ${hours}小時 ${minutes}分 ${seconds}秒`;
+  }
 }
 
 function getNextBirthday(month, day) {
   const now = new Date();
   let year = now.getFullYear();
-  let birthday = new Date(year, month - 1, day);
+  const birthday = new Date(`${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}T00:00:00`);
   if (birthday < now) {
-    birthday = new Date(year + 1, month - 1, day);
+    birthday.setFullYear(year + 1);
   }
   return birthday;
 }
@@ -43,13 +51,13 @@ function updateAllTimers() {
 
   updateTimer("meetTimer", new Date("2023-09-11T00:00:00"), now);
   updateTimer("confessTimer", new Date("2025-01-01T00:00:00"), now);
-  updateTimer("serverOpenTimer", new Date("2025-06-06T00:00:00"), now);
-  updateTimer("monaBirthdayTimer", getNextBirthday(12, 16), now);   // Mona: 12/16
-  updateTimer("bingchenBirthdayTimer", getNextBirthday(11, 3), now); // Bingchen: 11/3
+  updateTimer("monaBirthdayTimer", getNextBirthday(12, 16), now);
+  updateTimer("bingchenBirthdayTimer", getNextBirthday(11, 3), now);
   updateTimer("newYearTimer", new Date("2025-12-31T23:59:59"), now);
 }
 
-setInterval(updateAllTimers, 1000);
-
-
-updateTimer("serverTimer", new Date("2025-06-06T00:00:00"), now);
+// 初始化並每秒更新
+window.onload = function () {
+  updateAllTimers();
+  setInterval(updateAllTimers, 1000);
+};

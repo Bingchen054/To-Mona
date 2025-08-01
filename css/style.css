@@ -103,32 +103,31 @@ p {
   text-align: left;
 }
 
-/* 另一組樣式：白色按鈕組（用於部分內頁） */
-.nav-container {
+.nav-buttons {
+  background: white;
+  padding: 60px 40px; /* 增加上下 padding */
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-  background: white;
+  gap: 60px; /* 增加按鈕間距 */
   flex-wrap: wrap;
 }
 
-.nav-container a {
-  background-color: #ffe6f0;
-  padding: 1rem 2rem;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  font-size: 1.2em;
+.nav-button {
+  background: #ffe6f0;
+  border-radius: 18px;
+  padding: 20px 35px;
+  font-size: 1.3rem;
   font-weight: bold;
-  color: #d63384;
-  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
-.nav-container a:hover {
-  background-color: #ffccd9;
-  transform: scale(1.05);
+.nav-button:hover {
+  transform: translateY(-4px);
 }
+
 
 .big-title {
   font-size: 4rem;
@@ -150,4 +149,34 @@ p {
   font-size: 1.3rem;
   padding: 20px 35px;
   font-weight: bold;
+}
+
+.nav-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.nav-buttons {
+  background: white;
+  padding: 60px 40px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.nav-button {
+  background: #ffe6f0;
+  border-radius: 18px;
+  padding: 20px 35px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.nav-button:hover {
+  transform: translateY(-4px);
 }
