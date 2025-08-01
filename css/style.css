@@ -74,3 +74,40 @@ h1 {
   width: 22%;
   font-size: 0.95em;
 }
+
+.countdown-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.countdown-left, .countdown-right {
+  width: 45%;
+}
+
+.countdown-left p, .countdown-right p {
+  font-size: 1.1em;
+  margin: 10px 0;
+  color: #444;
+}
+
+.new-year {
+  margin-bottom: 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-buttons.nav-4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.nav-buttons.nav-4 a {
+  padding: 20px;
+  width: 100%;
+}
