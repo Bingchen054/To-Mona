@@ -1,41 +1,81 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mona & Bingchen's Server</title>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Baloo 2', cursive;
+    }
+    .cover-container {
+      position: relative;
+      height: 100vh;
+      background-image: url("assets/images/cover.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      text-shadow: 1px 1px 5px black;
+    }
+    .main-title {
+      font-size: 3rem;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+    /* 暫時移除波浪動畫 */
+    .nav-buttons {
+      background: white;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .nav-button {
+      background: #ffe6f0;
+      border-radius: 15px;
+      padding: 15px 25px;
+      font-size: 1.1rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      text-decoration: none;
+      color: #d63384;
+    }
+    .nav-button:hover {
+      transform: translateY(-3px);
+    }
+  </style>
 </head>
-
-
 <body>
-
-  <!-- 封面區塊 -->
   <div class="cover-container">
-    <div class="overlay">
-      <h1 class="main-title">💖 我們的伺服器 💖</h1>
-      <h2 class="subtitle">Mona & Bingchen's Server</h2>
-      <p>💗 我們認識至今：<span id="meetTimer"></span></p>
-      <p>💘 我們表白至今：<span id="confessTimer"></span></p>
-      <p>💻 伺服器開啟至今：<span id="serverTimer"></span></p>
-      <p>🎂 Mona 下次生日倒數：<span id="monaBirthdayTimer"></span></p>
-      <p>🎂 Bingchen 下次生日倒數：<span id="bingchenBirthdayTimer"></span></p>
-      <p>🎆 距離年底還有：<span id="newYearTimer"></span></p>
-    </div>
+    <h1 class="main-title">💖 我們的伺服器 💖</h1>
+    <h2 class="subtitle">Mona & Bingchen's Server</h2>
+    <p class="subtitle">💗 我們認識至今：690天 7小時 36分 25秒</p>
+    <p class="subtitle">💘 我們表白至今：212天 6小時 36分 25秒</p>
+    <p class="subtitle">🎂 Mona 下一次生日倒數：</p>
+    <p class="subtitle">🎂 Bingchen 下一次生日倒數：</p>
+    <p class="subtitle">🌸 距離年底還有：</p>
   </div>
 
-  <!-- 四個入口 -->
+  <!-- 暫不加入波浪動畫 -->
+  <!-- <div class="wave"></div> -->
+
   <div class="nav-buttons">
-    <a href="messages.html">💬 Message Board</a>
-    <a href="photos.html">📸 Photo Gallery</a>
-    <a href="news.html">📰 Love News</a>
-    <a href="pdf.html">📄 Mona's Letters</a>
+    <a href="letters.html" class="nav-button">📄 Mona's Letters</a>
+    <a href="photos.html" class="nav-button">📸 Photo Gallery</a>
+    <a href="trips.html" class="nav-button">📰 Love News</a>
+    <a href="message.html" class="nav-button">💬 Message Board</a>
   </div>
-
-  <!-- JS -->
-  <script src="js/script.js"></script>
 </body>
 </html>
-
