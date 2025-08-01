@@ -1,38 +1,61 @@
+/* 主背景 */
+body {
+  margin: 0;
+  font-family: 'Baloo 2', cursive;
+  background-color: white;
+}
+
+/* 封面區塊 */
+.cover-container {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("assets/images/cover.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 1px 1px 5px black;
+  padding: 40px 20px;
+}
+
+.main-title {
+  font-size: 3rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
 /* 三個按鈕區域 */
-.nav-wrapper {
+.nav-section {
+  background: white;
+  padding: 60px 0;
   display: flex;
   justify-content: center;
-  margin-top: 40px;
-  margin-bottom: 60px; /* 增加與下方內容距離 */
 }
 
 .nav-buttons {
   display: flex;
-  justify-content: center;
-  gap: 40px; /* 按鈕之間的間距 */
   flex-wrap: wrap;
-  background-color: rgba(255, 255, 255, 0.95); /* 淡白底提升可讀性 */
-  padding: 30px 40px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(255, 192, 203, 0.25); /* 柔和陰影 */
+  gap: 40px;
+  justify-content: center;
+  max-width: 1000px;
 }
 
-/* 單個按鈕樣式 */
 .nav-button {
   background: #ffe6f0;
-  border-radius: 20px;
-  padding: 18px 30px;
+  color: #d63384;
+  text-decoration: none;
   font-size: 1.3rem;
   font-weight: bold;
-  border: none;
-  cursor: pointer;
-  color: #d63384;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.25s ease;
-  text-align: center;
+  padding: 20px 35px;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(255, 192, 203, 0.4);
+  transition: transform 0.3s ease;
 }
 
 .nav-button:hover {
