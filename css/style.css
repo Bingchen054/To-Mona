@@ -1,47 +1,50 @@
-/* 全頁背景圖片與字體設定 */
+/* 全頁字體與基本設定 */
 body {
   margin: 0;
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Baloo 2', 'PingFang TC', 'Heiti TC', sans-serif;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.8rem; /* 整體放大約 1.8 倍 */
+}
+
+/* 只給封面區塊設背景圖 */
+.cover-container {
+  min-height: 100vh;
   background-image: url('https://bingchen054.github.io/To-Mona/assets/images/cover.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-repeat: no-repeat;
-  color: white;
-}
 
-
-/* 封面區塊：包含主標題與倒數字 */
-.cover-container {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
   text-align: center;
+  color: white;
   text-shadow: 1px 1px 5px black;
 }
 
 .main-title {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-size: 5rem; /* 放大主標題 */
+  margin-bottom: 30px;
 }
 
 .subtitle {
-  font-size: 1.2rem;
-  margin-top: 10px;
+  font-size: 2rem;  /* 放大副標題 */
+  margin-top: 15px;
 }
 
-/* 三個按鈕的包裹區塊 */
+/* 下方按鈕區：背景為白色 */
 .nav-section {
-  background-color: transparent; /* 透明背景讓背景圖透出 */
+  background-color: white;
   padding: 60px 0;
   display: flex;
   justify-content: center;
 }
 
-/* 按鈕容器：排成一排或多行 */
+/* 按鈕容器 */
 .nav-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -50,15 +53,15 @@ body {
   max-width: 1000px;
 }
 
-/* 單個按鈕樣式 */
+/* 按鈕樣式 */
 .nav-button {
   background: #ffe6f0;
   color: #d63384;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 2rem;  /* 放大按鈕字體 */
   font-weight: bold;
-  padding: 20px 35px;
-  border-radius: 20px;
+  padding: 25px 45px;
+  border-radius: 24px;
   box-shadow: 0 6px 12px rgba(255, 192, 203, 0.4);
   transition: transform 0.3s ease;
 }
