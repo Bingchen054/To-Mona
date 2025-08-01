@@ -2,13 +2,14 @@
 body {
   margin: 0;
   font-family: 'Baloo 2', cursive;
-  background-image: url('assets/images/cover.jpg');
+  background-image: url('https://bingchen054.github.io/To-Mona/assets/images/cover.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: white;
 }
+
 
 /* 封面區塊：包含主標題與倒數字 */
 .cover-container {
