@@ -107,3 +107,16 @@ h1 {
   padding: 20px;
   width: 100%;
 }
+
+.timer-grid {
+  display: flex;
+  justify-content: center;
+  gap: 4em;
+  flex-wrap: wrap;
+  font-size: 1.1em;
+}
+
+.timer-left,
+.timer-right {
+  text-align: left;
+}

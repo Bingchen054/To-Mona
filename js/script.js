@@ -33,9 +33,12 @@ function updateAllTimers() {
 
   updateTimer("meetTimer", new Date("2023-09-11T00:00:00"), now);
   updateTimer("confessTimer", new Date("2025-01-01T00:00:00"), now);
-  updateTimer("monaBirthdayTimer", now, getNextBirthday(12, 16));
-  updateTimer("bingchenBirthdayTimer", now, getNextBirthday(11, 3));
-  updateTimer("newYearTimer", now, new Date(`${now.getFullYear()}-12-31T23:59:59`));
+  updateTimer("serverOpenTimer", new Date("2025-06-06T00:00:00"), now);
+  updateTimer("monaBirthdayTimer", getNextBirthday(12, 16), now);
+  updateTimer("bingchenBirthdayTimer", getNextBirthday(11, 3), now);
+  updateTimer("newYearTimer", new Date("2025-12-31T23:59:59"), now);
 }
 
+
 setInterval(updateAllTimers, 1000);
+
