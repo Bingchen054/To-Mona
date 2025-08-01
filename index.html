@@ -3,45 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>To Mona</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Mona & Bingchen's Server</title>
+
+  <!-- 字體 -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="background"></div>
 
-  <div class="content-card">
-    <h1>💖 我們的伺服器 💖</h1>
-
-<div class="cover-content">
-  <h1 class="title">Mona & Bingchen's Server</h1>
-  <div class="timer-grid">
-    <div class="timer-left">
-      <p>💖 我們認識至今：<span id="meetTimer"></span></p>
-      <p>💖 我們表白至今：<span id="confessTimer"></span></p>
-      <p>🖥️ 伺服器開啟至今：<span id="serverOpenTimer"></span></p>
-    </div>
-    <div class="timer-right">
+  <!-- 封面區塊 -->
+  <div class="cover-container">
+    <div class="overlay">
+      <h1 class="main-title">💖 我們的伺服器 💖</h1>
+      <h2 class="subtitle">Mona & Bingchen's Server</h2>
+      <p>💗 我們認識至今：<span id="meetTimer"></span></p>
+      <p>💘 我們表白至今：<span id="confessTimer"></span></p>
+      <p>💻 伺服器開啟至今：<span id="serverTimer"></span></p>
       <p>🎂 Mona 下次生日倒數：<span id="monaBirthdayTimer"></span></p>
       <p>🎂 Bingchen 下次生日倒數：<span id="bingchenBirthdayTimer"></span></p>
       <p>🎆 距離年底還有：<span id="newYearTimer"></span></p>
     </div>
   </div>
-</div>
 
+  <!-- 四個入口 -->
+  <div class="nav-buttons">
+    <a href="messages.html">💬 Message Board</a>
+    <a href="photos.html">📸 Photo Gallery</a>
+    <a href="news.html">📰 Love News</a>
+    <a href="pdf.html">📄 Mona's Letters</a>
+  </div>
 
-<div class="nav-buttons nav-4">
-  <a href="messages.html">💬<br />Message Board</a>
-  <a href="photos.html">📸<br />Photo Gallery</a>
-  <a href="news.html">📰<br />Love News</a>
-  <a href="letters.html">📄<br />Mona's Letters</a>
-</div>
-
-  <a href="letters.html">
-    📄<br />Mona's Letters
-  </a>
-</div>
-
-
+  <!-- JS -->
   <script src="js/script.js"></script>
 </body>
 </html>
