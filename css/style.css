@@ -1,182 +1,40 @@
-/* 網站通用設定 */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-image: url('https://bingchen054.github.io/To-Mona/assets/images/cover.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-/* 封面區塊 */
-.cover-container {
-  background-image: url('https://bingchen054.github.io/To-Mona/assets/images/cover.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  position: relative;
-}
-
-.overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.4); /* 半透明遮罩 */
-  padding: 2rem;
-  border-radius: 20px;
-}
-
-/* 標題樣式 */
-.main-title {
-  font-size: 2.5em;
-  font-weight: bold;
-  color: #fff0f5;
-  margin-bottom: 0.5rem;
-}
-
-.subtitle {
-  font-size: 1.8em;
-  margin-bottom: 1.5rem;
-}
-
-/* 倒數區域樣式 */
-p {
-  font-size: 1.2em;
-  margin: 10px 0;
-  color: #ffffff;
-}
-
-/* 四個按鈕區域 */
-.nav-buttons {
-  display: flex;
-  justify-content: space-around;
-  gap: 10px;
-  flex-wrap: wrap;
-  padding: 2rem;
-}
-
-.nav-buttons a {
-  background: #fff0f5;
-  color: #d63384;
-  text-decoration: none;
-  padding: 20px;
-  border-radius: 15px;
-  width: 28%;
-  font-size: 1em;
-  box-shadow: 0 4px 12px rgba(255, 192, 203, 0.3);
-  transition: transform 0.2s;
-  text-align: center;
-}
-
-.nav-buttons a:hover {
-  transform: translateY(-3px);
-}
-
-/* 四個按鈕（緊湊版） */
-.nav-buttons.nav-4 {
-  width: 22%;
-  font-size: 0.95em;
-}
-
-.nav-buttons.nav-4 a {
-  padding: 20px;
-  width: 100%;
-}
-
-/* 額外倒數用於其他頁面 */
-.timer-grid {
-  display: flex;
-  justify-content: center;
-  gap: 4em;
-  flex-wrap: wrap;
-  font-size: 1.1em;
-}
-
-.timer-left,
-.timer-right {
-  text-align: left;
-}
-
-.nav-buttons {
-  background: white;
-  padding: 60px 40px; /* 增加上下 padding */
-  display: flex;
-  justify-content: center;
-  gap: 60px; /* 增加按鈕間距 */
-  flex-wrap: wrap;
-}
-
-.nav-button {
-  background: #ffe6f0;
-  border-radius: 18px;
-  padding: 20px 35px;
-  font-size: 1.3rem;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.nav-button:hover {
-  transform: translateY(-4px);
-}
-
-
-.big-title {
-  font-size: 4rem;
-  font-weight: 900;
-  text-align: center;
-}
-
-.big-title {
-  font-size: 4rem;
-  font-weight: 900;
-  text-align: center;
-}
-
-.countdown-text {
-  font-size: 1.5rem;
-}
-
-.large-button {
-  font-size: 1.3rem;
-  padding: 20px 35px;
-  font-weight: bold;
-}
-
+/* 三個按鈕區域 */
 .nav-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 60px; /* 增加與下方內容距離 */
 }
 
 .nav-buttons {
-  background: white;
-  padding: 60px 40px;
   display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 40px; /* 按鈕之間的間距 */
   flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.95); /* 淡白底提升可讀性 */
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(255, 192, 203, 0.25); /* 柔和陰影 */
 }
 
+/* 單個按鈕樣式 */
 .nav-button {
   background: #ffe6f0;
-  border-radius: 18px;
-  padding: 20px 35px;
+  border-radius: 20px;
+  padding: 18px 30px;
   font-size: 1.3rem;
   font-weight: bold;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  color: #d63384;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease;
+  text-align: center;
 }
 
 .nav-button:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
 }
