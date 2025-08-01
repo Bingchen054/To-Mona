@@ -17,7 +17,7 @@
         label = "💖 我們認識至今：";
         break;
       case "confessTimer":
-        label = "💘 我們表白至今：";
+        label = "💘 表白至今：";
         break;
       case "monaBirthdayTimer":
         label = "🎂 Mona 下一次生日倒數：";
