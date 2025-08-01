@@ -1,19 +1,41 @@
-const startDate = new Date("2023-09-11T00:00:00");
-
-function updateLoveTimer() {
+function updateTimer(id, from, to) {
   const now = new Date();
-  const diff = now - startDate;
+  const diff = to - from;
+
+  if (diff < 0) {
+    document.getElementById(id).textContent = "已經過去了 ❤️";
+    return;
+  }
 
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
   const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
   const minutes = Math.floor((diff / (1000 * 60)) % 60);
   const seconds = Math.floor((diff / 1000) % 60);
 
-  document.getElementById("days").textContent = days;
-  document.getElementById("hours").textContent = hours;
-  document.getElementById("minutes").textContent = minutes;
-  document.getElementById("seconds").textContent = seconds;
+  document.getElementById(id).textContent =
+    `${days}天 ${hours}小時 ${minutes}分 ${seconds}秒`;
 }
 
-setInterval(updateLoveTimer, 1000);
-updateLoveTimer();
+function getNextBirthday(month, day) {
+  const now = new Date();
+  let year = now.getFullYear();
+  let birthday = new Date(`${year}-${month}-${day}T00:00:00`);
+
+  if (birthday < now) {
+    birthday = new Date(`${year + 1}-${month}-${day}T00:00:00`);
+  }
+
+  return birthday;
+}
+
+function updateAllTimers() {
+  const now = new Date();
+
+  updateTimer("meetTimer", new Date("2023-09-11T00:00:00"), now);
+  updateTimer("confessTimer", new Date("2025-01-01T00:00:00"), now);
+  updateTimer("monaBirthdayTimer", now, getNextBirthday(12, 16));
+  updateTimer("bingchenBirthdayTimer", now, getNextBirthday(11, 3));
+  updateTimer("newYearTimer", now, new Date(`${now.getFullYear()}-12-31T23:59:59`));
+}
+
+setInterval(updateAllTimers, 1000);
