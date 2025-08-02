@@ -1,16 +1,35 @@
 ---
 layout: default
-title: Hawaii Album
-permalink: /gallery/hawaii/
+title: Hawaii 2025
+permalink: /To-Mona/gallery/hawaii/
 ---
 
-<h2 class="mb-4">🌺 Hawaii 2025</h2>
-<p class="subtitle">Beautiful memories from our trip to paradise 🌴</p>
+<h2 class="mb-3">🌺 <strong>Hawaii 2025</strong></h2>
+<p>Beautiful memories from our trip to paradise 🌴</p>
 
-<div class="row">
+<div class="photo-grid">
   {% for i in (1..9) %}
-    <div class="col-md-4 mb-4">
-      <img src="/To-Mona/assets/albums/hawaii-2025/{{ i }}.jpg" class="img-fluid rounded shadow-sm" alt="Hawaii photo {{ i }}">
+    <div class="photo-card">
+      <img src="/assets/albums/hawaii-2025/{{ i }}.jpg" alt="Hawaii {{ i }}">
     </div>
   {% endfor %}
 </div>
+
+<style>
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+.photo-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+.photo-card img:hover {
+  transform: scale(1.03);
+}
+</style>
