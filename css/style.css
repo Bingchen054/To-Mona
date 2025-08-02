@@ -86,3 +86,19 @@ body {
 .text-primary:hover {
   text-decoration: underline;
 }
+
+.card-img-top {
+  object-fit: cover;
+  height: 250px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.card {
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}

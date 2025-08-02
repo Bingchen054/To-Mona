@@ -1,0 +1,16 @@
+---
+layout: default
+title: Hawaii Album
+permalink: /gallery/hawaii/
+---
+
+<h2 class="mb-4">🌺 Hawaii 2025</h2>
+<p class="subtitle">Beautiful memories from our trip to paradise 🌴</p>
+
+<div class="row">
+  {% for i in (1..9) %}
+    <div class="col-md-4 mb-4">
+      <img src="/To-Mona/assets/albums/hawaii-2025/{{ i }}.jpg" class="img-fluid rounded shadow-sm" alt="Hawaii photo {{ i }}">
+    </div>
+  {% endfor %}
+</div>
